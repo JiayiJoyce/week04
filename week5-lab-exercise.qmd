@@ -1,0 +1,19 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## Quarto
+
+```{r}
+#| label: setup
+#| include: FALSE
+#| error: true
+install.packages("pacman")
+library(pacman)
+pacman::p_load(tidyverse, 
+               dplyr)
+```
+
+\`\`\`{r} #\| echo:TRUE

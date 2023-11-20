@@ -1,0 +1,28 @@
+---
+title: "SOCS0100 first quarto"
+format: html
+editor: visual
+---
+
+# data wrangling task for Starwars {style="color: pink"}
+
+## average height for different gender
+
+```{r}
+#| echo: true
+#| warning: false
+install.packages("dplyr")
+starwars %>%
+  group_by(gender) %>%
+  summarize(
+    avg_height = mean(height, na.rm = TRUE) %>% round(2)
+  )
+
+```
+
+## selecting name height and mass
+
+```{r, echo=TRUE}
+starwars %>%
+  select(name, height, mass)
+```
